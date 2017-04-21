@@ -47,7 +47,7 @@ public class DateUtil {
 	 *
 	 */
 	public static int getCurrentMonthDay() {
-
+		
 		Calendar a = Calendar.getInstance();
 		a.set(Calendar.DATE, 1);
 		a.roll(Calendar.DATE, -1);
@@ -71,6 +71,8 @@ public class DateUtil {
 		}
 		return false;
 	}
+	
+	
 	/**
 	 * 判断选择的日期是否是今天
 	 * @Title  isToday  
@@ -101,7 +103,21 @@ public class DateUtil {
 		}
 		return false;
 	}
-
+	/**
+	 * 查询当月[到今天时间]与非当月天数 
+	 * @Title  getDaysOfMonths  
+	 * @return int   
+	 *
+	 */
+	public static int getDaysOfMonths(long time){
+		if(isThisMonth(time)){
+			// 本月
+			return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+		} else {
+			// 历史月 
+			return getDaysOfMonth(new Date(time));
+		}
+	}
 	public static void main(String[] args) throws ParseException {
 //		System.out.println(getDateByYearAndMonth("2017-05"));
 		
@@ -109,6 +125,7 @@ public class DateUtil {
 		System.out.println(getDateByYearAndMonth("2017-03").getTime());
 		System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
 		System.out.println(isThisMonth(getDateByYearAndMonth("2017-4").getTime()));
+		System.out.println(getDaysOfMonths(getDateByYearAndMonth("2017-4").getTime()));
 		
 		
 	}
