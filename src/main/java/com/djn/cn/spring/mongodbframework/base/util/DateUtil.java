@@ -110,7 +110,7 @@ public class DateUtil {
 	 * @return int   
 	 *
 	 */
-	public static int getDaysOfMonths(long time){
+	public static int getDaysOfThisMonth(long time){
 		if(isThisMonth(time)){
 			// 本月
 			return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
@@ -126,7 +126,7 @@ public class DateUtil {
 		System.out.println(getDateByYearAndMonth("2017-03").getTime());
 		System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
 		System.out.println(isThisMonth(getDateByYearAndMonth("2017-4").getTime()));
-		System.out.println(getDaysOfMonths(getDateByYearAndMonth("2017-4").getTime()));
+		System.out.println(getDaysOfThisMonth(getDateByYearAndMonth("2017-4").getTime()));
 		
 		
 	}
