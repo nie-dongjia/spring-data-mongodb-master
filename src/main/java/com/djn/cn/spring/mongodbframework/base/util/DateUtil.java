@@ -2,8 +2,10 @@ package com.djn.cn.spring.mongodbframework.base.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -15,21 +17,22 @@ import java.util.Date;
  */
 public class DateUtil {
 	/**
-	 * "2017-05" -> Date 转换成日期 
+	 * "2017-05" -> Date 转换成日期
 	 * 
 	 * @Title getDateByYearAndMonth
 	 * @return Date
-	 * @throws ParseException 
+	 * @throws ParseException
 	 *
 	 */
 	public static Date getDateByYearAndMonth(String month) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
-		Date date  = sdf.parse(month);
+		Date date = sdf.parse(month);
 		return date;
 	}
 
 	/**
 	 * 获取时间月份天数
+	 * 
 	 * @Title getDaysOfMonth
 	 * @return int
 	 *
@@ -39,27 +42,28 @@ public class DateUtil {
 		calendar.setTime(date);
 		return calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
 	}
-	
 
 	/**
 	 * 获取当月的 天数
-	 * @Title  getCurrentMonthDay  
-	 * @return int   
+	 * 
+	 * @Title getCurrentMonthDay
+	 * @return int
 	 *
 	 */
 	public static int getCurrentMonthDay() {
-		
+
 		Calendar a = Calendar.getInstance();
 		a.set(Calendar.DATE, 1);
 		a.roll(Calendar.DATE, -1);
 		int maxDate = a.get(Calendar.DATE);
 		return maxDate;
 	}
-	
+
 	/**
 	 * 判断选择的日期是否是本周
-	 * @Title  isThisWeek  
-	 * @return boolean   
+	 * 
+	 * @Title isThisWeek
+	 * @return boolean
 	 *
 	 */
 	public static boolean isThisWeek(long time) {
@@ -72,12 +76,12 @@ public class DateUtil {
 		}
 		return false;
 	}
-	
-	
+
 	/**
 	 * 判断选择的日期是否是今天
-	 * @Title  isToday  
-	 * @return boolean   
+	 * 
+	 * @Title isToday
+	 * @return boolean
 	 *
 	 */
 	public static boolean isToday(long time) {
@@ -86,8 +90,9 @@ public class DateUtil {
 
 	/**
 	 * 判断选择的日期是否是本月
-	 * @Title  isThisMonth  
-	 * @return boolean   
+	 * 
+	 * @Title isThisMonth
+	 * @return boolean
 	 *
 	 */
 	public static boolean isThisMonth(long time) {
@@ -104,31 +109,64 @@ public class DateUtil {
 		}
 		return false;
 	}
+
 	/**
-	 * 查询当月[到今天时间]与非当月天数 
-	 * @Title  getDaysOfMonths  
-	 * @return int   
+	 * 查询当月[到今天时间]与非当月天数
+	 * 
+	 * @Title getDaysOfMonths
+	 * @return int
 	 *
 	 */
-	public static int getDaysOfThisMonth(long time){
-		if(isThisMonth(time)){
+	public static int getDaysOfThisMonth(long time) {
+		if (isThisMonth(time)) {
 			// 本月
 			return Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 		} else {
-			// 历史月 
+			// 历史月
 			return getDaysOfMonth(new Date(time));
 		}
 	}
+
+	/**
+	 * 获取月份DateList 包括当月
+	 * 
+	 * @Title dayReport
+	 * @return List<Date>
+	 *
+	 */
+	public static List<Date> dayReport(Date month) {
+		List<Date> dates = new ArrayList<Date>();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(month);// month 为指定月份任意日期
+		int dayNumOfMonth = getDaysOfThisMonth(month.getTime());
+		cal.set(Calendar.DAY_OF_MONTH, 1);// 从一号开始
+		for (int i = 0; i < dayNumOfMonth; i++, cal.add(Calendar.DATE, 1)) {
+			Date d = cal.getTime();
+			// SimpleDateFormat simpleDateFormat = new
+			// SimpleDateFormat("yyyy-MM-dd");
+			System.out.println(d);
+			// String df = simpleDateFormat.format(d);
+			dates.add(d);
+		}
+		return dates;
+	}
+
 	public static void main(String[] args) throws ParseException {
-//		System.out.println(getDateByYearAndMonth("2017-05"));
-		
-		System.out.println(getDaysOfMonth(getDateByYearAndMonth("2017-03")));
-		System.out.println(getDateByYearAndMonth("2017-03").getTime());
-		System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
-		System.out.println(isThisMonth(getDateByYearAndMonth("2017-4").getTime()));
-		System.out.println(getDaysOfThisMonth(getDateByYearAndMonth("2017-4").getTime()));
-		
-		
+		// System.out.println(getDateByYearAndMonth("2017-05"));
+
+		// System.out.println(getDaysOfMonth(getDateByYearAndMonth("2017-03")));
+		// System.out.println(getDateByYearAndMonth("2017-03").getTime());
+		// System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
+		// System.out.println(isThisMonth(getDateByYearAndMonth("2017-4").getTime()));
+		// System.out.println(getDaysOfThisMonth(getDateByYearAndMonth("2017-4").getTime()));
+		dayReport(getDateByYearAndMonth("2017-3"));
+		System.out.println(dayReport(getDateByYearAndMonth("2017-5")));
+//		Date d = new Date();
+//		System.out.println(d);
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+//		String fSerachMonth = sdf.format(d);
+//		System.out.println(fSerachMonth);
+
 	}
 
 }
