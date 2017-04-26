@@ -159,14 +159,16 @@ public class DateUtil {
 		// System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
 		// System.out.println(isThisMonth(getDateByYearAndMonth("2017-4").getTime()));
 		// System.out.println(getDaysOfThisMonth(getDateByYearAndMonth("2017-4").getTime()));
-		dayReport(getDateByYearAndMonth("2017-3"));
-		System.out.println(dayReport(getDateByYearAndMonth("2017-5")));
+//		dayReport(getDateByYearAndMonth("2017-3"));
+//		System.out.println(dayReport(getDateByYearAndMonth("2017-5")));
 //		Date d = new Date();
 //		System.out.println(d);
 //		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
 //		String fSerachMonth = sdf.format(d);
 //		System.out.println(fSerachMonth);
-
+		 int i = 1;
+		  int j = 31;
+		  System.out.println(1/31);
 	}
 
 }
