@@ -1,4 +1,4 @@
-package com.djn.cn.spring.mongodbframework.base.util;
+package com.djn.cn.spring.mongodbframework.base.enums;
 
 /**
  * 

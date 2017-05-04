@@ -166,9 +166,21 @@ public class DateUtil {
 //		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
 //		String fSerachMonth = sdf.format(d);
 //		System.out.println(fSerachMonth);
-		 int i = 1;
-		  int j = 31;
-		  System.out.println(1/31);
+//		int i = 1;   
+//		int j = 31;  
+//		System.out.println(1/31);
+//		Date date = new  Date();
+//		System.out.println(date.getHours());
+//		System.out.println(date.getMinutes());
+//		System.out.println(date.getHours()*60+date.getMinutes()+"min");
+//		String str = "9:00";
+//		System.out.println(str.substring(0, 1));
+//		System.out.println(str.substring(2, 4));
+		List<Date> listDate = new ArrayList<>();
+		listDate = DateUtil.dayReport(new Date());
+		System.out.println(listDate.size());
+		System.out.println(getCurrentMonthDay());
+//		
 	}
 
 }
