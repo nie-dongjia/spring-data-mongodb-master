@@ -2,6 +2,10 @@ package com.djn.cn.spring.mongodbframework.base.entity;
 
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
+import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
+
 /**
  * 
  * @ClassName BaseEntity
@@ -11,10 +15,15 @@ import java.util.Date;
  *
  */
 public class BaseEntity {
+	@Id
+	/**id*/
 	private String id;
+	/**名称*/
 	private String name;
-	private Date   createTime;
+	/***/
+	private Date   createTime = new Date();
 	private Date   updateTime;
+	private UserInfo creator;
 	public String getId() {
 		return id;
 	}
@@ -38,5 +47,11 @@ public class BaseEntity {
 	}
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
+	}
+	public UserInfo getCreator() {
+		return creator;
+	}
+	public void setCreator(UserInfo creator) {
+		this.creator = creator;
 	}
 }

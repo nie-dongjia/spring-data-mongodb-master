@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.djn.cn.spring.mongodbframework.base.entity.UserInfo;
-import com.djn.cn.spring.mongodbframework.base.repository.IUserInfoRepository;
-import com.djn.cn.spring.mongodbframework.base.service.IUserInfoService;
+import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
+import com.djn.cn.spring.mongodbframework.sys.repository.IUserInfoRepository;
+import com.djn.cn.spring.mongodbframework.sys.service.IUserInfoService;
 
 
 

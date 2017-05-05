@@ -1,4 +1,4 @@
-package com.djn.cn.spring.mongodbframework.base.entity;
+package com.djn.cn.spring.mongodbframework.sys.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

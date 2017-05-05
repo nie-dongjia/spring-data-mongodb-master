@@ -33,11 +33,4 @@ public enum DailyEnum {
 	public boolean isRest() {
 		return false;
 	}
-	
-	
-	public static void main(String[] args) {
-		  int i = 1;
-		  int j = 31;
-		  System.out.println(1/31);
-	}
 }

@@ -1,13 +1,13 @@
-package com.djn.cn.spring.mongodbframework.base.service.impl;
+package com.djn.cn.spring.mongodbframework.sys.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.djn.cn.spring.mongodbframework.base.entity.UserInfo;
-import com.djn.cn.spring.mongodbframework.base.repository.IUserInfoRepository;
-import com.djn.cn.spring.mongodbframework.base.service.IUserInfoService;
+import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
+import com.djn.cn.spring.mongodbframework.sys.repository.IUserInfoRepository;
+import com.djn.cn.spring.mongodbframework.sys.service.IUserInfoService;
 @Service
 public class UserInfoServiceImpl implements IUserInfoService {
 	@Autowired

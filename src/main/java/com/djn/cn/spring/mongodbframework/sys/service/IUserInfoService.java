@@ -1,8 +1,8 @@
-package com.djn.cn.spring.mongodbframework.base.service;
+package com.djn.cn.spring.mongodbframework.sys.service;
 
 import java.util.List;
 
-import com.djn.cn.spring.mongodbframework.base.entity.UserInfo;
+import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
 
 /**
  * 
