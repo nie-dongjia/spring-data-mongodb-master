@@ -45,12 +45,12 @@ public class UserInfoTest {
 	}
 	@Test
 	public void saveOne() {
-		//590d92a718a82a18535719f4
+		//590dd39818a8b7f020226db6
 		UserInfo userInfo = new UserInfo();
 		userInfo.setName("聂冬佳");
 		userInfo.setPassword("123456");
 		userInfo.setUserName("niedongjia");
-		userInfo.setCreator(iUserInfoRepository.findOne("590d92a718a82a18535719f4"));
+		userInfo.setCreator(iUserInfoRepository.findOne("590dd39818a8b7f020226db6"));
 		iUserInfoRepository.save(userInfo);
 	}
 	

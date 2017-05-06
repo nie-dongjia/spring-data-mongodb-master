@@ -47,5 +47,9 @@ public class FileInfo extends BaseEntity{
 	public void setAccessoryPath(String accessoryPath) {
 		this.accessoryPath = accessoryPath;
 	}
-	
+	@Override
+	public String toString() {
+		return "FileInfo [uuidName=" + uuidName + ", fileName=" + fileName + ", savePath=" + savePath
+				+ ", relativeAddress=" + relativeAddress + ", accessoryPath=" + accessoryPath + "]";
+	}
 }

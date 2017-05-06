@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/web/file_info")
-public class FileInfoController extends BaseController {
-	
+public class FileInfoController extends BaseController{
+
 }
