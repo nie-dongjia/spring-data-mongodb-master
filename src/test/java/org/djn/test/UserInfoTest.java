@@ -23,14 +23,17 @@ public class UserInfoTest {
 	@Test
 	public void save() {
 		UserInfo userInfo = new UserInfo();
-		userInfo.setNickName("AAA");
-		userInfo.setPassword("1234556");
-		userInfo.setUserName("聂冬佳3");
+		userInfo.setName("管理员");
+		userInfo.setPassword("123456");
+		userInfo.setUserName("admin");
 		System.out.println(iUserInfoRepository.save(userInfo));
 	}
 	@Test
 	public void find() {
-		System.out.println(iUserInfoRepository.findOneByUserName("聂冬佳3"));
+		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia"));
+		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getId());
+		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getCreateTime());
+		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getCreator());
 	}
 	@Test
 	public void findAll() {
@@ -39,6 +42,16 @@ public class UserInfoTest {
 	@Test
 	public void findAllService() {
 		System.out.println(iUserInfoService.findAll());
+	}
+	@Test
+	public void saveOne() {
+		//590d92a718a82a18535719f4
+		UserInfo userInfo = new UserInfo();
+		userInfo.setName("聂冬佳");
+		userInfo.setPassword("123456");
+		userInfo.setUserName("niedongjia");
+		userInfo.setCreator(iUserInfoRepository.findOne("590d92a718a82a18535719f4"));
+		iUserInfoRepository.save(userInfo);
 	}
 	
 	

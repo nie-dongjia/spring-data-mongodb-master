@@ -1,7 +1,9 @@
 package com.djn.cn.spring.mongodbframework.sys.entity;
 
-import org.springframework.data.annotation.Id;
+
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
 
 /**
  * 
@@ -12,9 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 @Document(collection = "T_BD_UserInfo")
-public class UserInfo {
-	@Id
-	private String id;
+public class UserInfo extends BaseEntity{
 	/** 登录名*/
 	private String userName;
 	/**昵称*/
@@ -23,12 +23,7 @@ public class UserInfo {
 	private String password;	
 	/**邮箱*/
 	private String email; 		
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+
 	public String getUserName() {
 		return userName;
 	}
@@ -55,8 +50,7 @@ public class UserInfo {
 	}
 	@Override
 	public String toString() {
-		return "UserInfo [id=" + id + ", userName=" + userName + ", nickName=" + nickName + ", password=" + password
-				+ ", email=" + email + "]";
+		return "UserInfo [userName=" + userName + ", nickName=" + nickName + ", password=" + password + ", email="
+				+ email + "]";
 	}
-	
 }
