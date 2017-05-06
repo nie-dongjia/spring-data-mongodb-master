@@ -1,21 +1,17 @@
 package com.djn.cn.spring.mongodbframework.base.controller;
 
-
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * 
- * @ClassName IndexController
- * @Description 系统跳转
+ * @ClassName FileInfoController
+ * @Description  文件controller 
  * @author BigJia-Perfect
- * @date 2017年5月5日 上午1:02:45
+ * @date 2017年5月6日 下午9:11:23
  *
  */
 @Controller
-public class IndexController {
-	@RequestMapping("/index")
-	public String toLogin(){
-		return "index";
-	}
+@RequestMapping("/web/file_info")
+public class FileInfoController extends BaseController {
+	
 }

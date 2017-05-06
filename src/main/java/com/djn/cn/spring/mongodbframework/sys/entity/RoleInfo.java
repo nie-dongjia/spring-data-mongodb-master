@@ -1,4 +1,9 @@
 package com.djn.cn.spring.mongodbframework.sys.entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
+
 /**
  * 
  * @ClassName RoleInfo
@@ -7,6 +12,7 @@ package com.djn.cn.spring.mongodbframework.sys.entity;
  * @date 2017年5月5日 下午2:49:29
  *
  */
-public class RoleInfo {
+@Document(collection = "T_SYS_RoleInfo")
+public class RoleInfo extends BaseEntity{
 	
 }

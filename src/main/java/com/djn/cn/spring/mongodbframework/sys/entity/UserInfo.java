@@ -13,7 +13,7 @@ import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
  * @date 2017年4月25日 上午11:11:53
  *
  */
-@Document(collection = "T_BD_UserInfo")
+@Document(collection = "T_SYS_UserInfo")
 public class UserInfo extends BaseEntity{
 	/** 登录名*/
 	private String userName;
