@@ -1,5 +1,7 @@
 package com.djn.cn.spring.mongodbframework.sys.entity;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
@@ -14,5 +16,6 @@ import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
  */
 @Document(collection = "T_SYS_RoleInfo")
 public class RoleInfo extends BaseEntity{
-	
+	/**模块 */
+	List<ModuleInfo> moduleInfos ;
 }
