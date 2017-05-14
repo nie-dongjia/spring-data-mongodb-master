@@ -36,7 +36,6 @@ public class ModuleInfo extends BaseEntity{
 	public void setParentModule(ModuleInfo parentModule) {
 		this.parentModule = parentModule;
 	}
-
 	@Override
 	public String toString() {
 		return "ModuleInfo [url=" + url + ", parentModule=" + parentModule + "]";

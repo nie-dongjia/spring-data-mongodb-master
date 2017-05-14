@@ -2,6 +2,7 @@ package com.djn.cn.spring.mongodbframework.sys.entity;
 
 import java.util.List;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
@@ -17,6 +18,7 @@ import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
 @Document(collection = "T_SYS_RoleInfo")
 public class RoleInfo extends BaseEntity{
 	/** 模块 */
+	@DBRef(lazy=true)
 	List<ModuleInfo> moduleInfos ;
 
 	public List<ModuleInfo> getModuleInfos() {

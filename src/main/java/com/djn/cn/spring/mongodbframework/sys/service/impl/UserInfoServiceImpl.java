@@ -9,7 +9,7 @@ import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
 import com.djn.cn.spring.mongodbframework.sys.repository.IUserInfoRepository;
 import com.djn.cn.spring.mongodbframework.sys.service.IUserInfoService;
 @Service
-public class UserInfoServiceImpl implements IUserInfoService {
+public class UserInfoServiceImpl  implements IUserInfoService {
 	@Autowired
 	private IUserInfoRepository iUserInfoRepository;
 	@Override
