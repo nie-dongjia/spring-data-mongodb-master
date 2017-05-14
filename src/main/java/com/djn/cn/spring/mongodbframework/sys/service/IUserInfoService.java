@@ -14,4 +14,5 @@ import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
  */
 public interface IUserInfoService {
 	List<UserInfo> findAll();
+	UserInfo findById(String id);
 }

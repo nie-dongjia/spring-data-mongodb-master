@@ -17,12 +17,12 @@ public interface IFileInfoService {
 	 * @return ManagerUserInfo   
 	 *
 	 */
-	public FileInfo save(FileInfo fileInfo);
+	FileInfo save(FileInfo fileInfo);
 	/**
 	 * 删除单个文件信息
 	 * @Title  delete  
 	 * @return void   
 	 *
 	 */
-    public void delete(FileInfo fileInfo);
+    void delete(FileInfo fileInfo);
 }

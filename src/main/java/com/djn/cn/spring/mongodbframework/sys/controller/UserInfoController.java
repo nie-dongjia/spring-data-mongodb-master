@@ -26,6 +26,14 @@ public class UserInfoController extends BaseController{
 		return result;
 	}
 	
+	@RequestMapping("findById")
+	@ResponseBody
+	public Object findById(String id){
+		Map<String,Object> result = new HashMap<>();
+		result.put("result", iUserInfoService.findById(id));
+		return result;
+	}
+	
 	
 	
 }

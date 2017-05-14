@@ -3,6 +3,7 @@ package com.djn.cn.spring.mongodbframework.sys.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
@@ -15,5 +16,9 @@ public class UserInfoServiceImpl  implements IUserInfoService {
 	@Override
 	public List<UserInfo> findAll() {
 		return iUserInfoRepository.findAll();
+	}
+	@Override
+	public UserInfo findById(String id) {
+		return iUserInfoRepository.findOne(id);
 	}
 }
