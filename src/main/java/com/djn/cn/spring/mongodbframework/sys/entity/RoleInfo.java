@@ -18,4 +18,19 @@ import com.djn.cn.spring.mongodbframework.base.entity.BaseEntity;
 public class RoleInfo extends BaseEntity{
 	/** 模块 */
 	List<ModuleInfo> moduleInfos ;
+
+	public List<ModuleInfo> getModuleInfos() {
+		return moduleInfos;
+	}
+
+	public void setModuleInfos(List<ModuleInfo> moduleInfos) {
+		this.moduleInfos = moduleInfos;
+	}
+
+	@Override
+	public String toString() {
+		return "RoleInfo [moduleInfos=" + moduleInfos + "]";
+	}
+	
+	
 }
