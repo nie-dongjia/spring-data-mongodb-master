@@ -23,10 +23,10 @@ public class FileInfoTest {
 	private IFileInfoService iFileInfoService;
 	@Test
 	public void save() {
-		FileInfo fileInfo = new FileInfo();
-		fileInfo.setFileName("666");
-		
-		System.out.println(iFileInfoService.save(fileInfo));
+//		FileInfo fileInfo = new FileInfo();
+//		fileInfo.setFileName("666");
+//		
+//		System.out.println(iFileInfoService.save(fileInfo));
 	}
 	@Test
 	public void find() {

@@ -22,11 +22,11 @@ public class UserInfoTest {
 	private IUserInfoService iUserInfoService;
 	@Test
 	public void save() {
-		UserInfo userInfo = new UserInfo();
-		userInfo.setName("管理员1");
-		userInfo.setPassword("123456");
-		userInfo.setUserName("admin");
-		System.out.println(iUserInfoRepository.save(userInfo));
+//		UserInfo userInfo = new UserInfo();
+//		userInfo.setName("管理员1");
+//		userInfo.setPassword("123456");
+//		userInfo.setUserName("admin");
+//		System.out.println(iUserInfoRepository.save(userInfo));
 	}
 //	@Test
 //	public void find() {
