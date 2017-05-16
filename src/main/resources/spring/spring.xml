@@ -11,4 +11,5 @@
 
     <import resource="classpath:spring/spring-mongodb.xml"/>
     <import resource="classpath:spring/spring-ehcache.xml"/>
+    <import resource="classpath:spring/spring-shiro.xml"/>
 </beans>

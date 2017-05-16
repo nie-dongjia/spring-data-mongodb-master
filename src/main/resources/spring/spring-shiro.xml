@@ -16,7 +16,7 @@
 	<!-- 这里主要是设置自定义的单Realm应用,若有多个Realm,可使用'realms'属性代替 -->
 	<!-- Shiro的主要业务层对象基于web的应用程序 -->
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-		<property name="realm" ref="userRealmImpl" />
+<!-- 		<property name="realm" ref="userRealmImpl" /> -->
 		<property name="cacheManager" ref="shiroEhcacheManager" />
 		<property name="rememberMeManager" ref="rememberMeManager" />
 	</bean>
@@ -57,11 +57,11 @@
 		<!-- anon：它对应的过滤器里面是空的,什么都没做,这里.do和.jsp后面的*表示参数,比方说login.jsp?main这种 -->
 		<!-- authc：该过滤器下的页面必须验证后才能访问,它是Shiro内置的一个拦截器org.apache.shiro.web.filter.authc.FormAuthenticationFilter
 		 user没有参数表示必须存在用户，当登入操作时不做检查-->
-		<property name="filters">
+<!-- 		<property name="filters">
 		    <map>
 		        <entry key="authc" value-ref="MyformAuthcFilter"/>
 		    </map>
-		</property>
+		</property> -->
 		<property name="filterChainDefinitions">
 			<value>
 				/resources/** = anon  
