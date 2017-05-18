@@ -25,13 +25,11 @@ public class DepartmentInfoTest {
 		departmentInfo.setName("研发部");
 		System.out.println(iDepartmentInfoRepository.save(departmentInfo));
 	}
-//	@Test
-//	public void find() {
-//		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia"));
-//		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getId());
-//		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getCreateTime());
-//		System.out.println(iUserInfoRepository.findOneByUserName("niedongjia").getCreator());
-//	}
+	@Test
+	public void find() {
+		// ObjectId("591d6e9a2973d270b70d6e13")
+		System.out.println(iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13").getName());
+	}
 //	@Test
 //	public void findAll() {
 //		System.out.println(iUserInfoRepository.findAll());
