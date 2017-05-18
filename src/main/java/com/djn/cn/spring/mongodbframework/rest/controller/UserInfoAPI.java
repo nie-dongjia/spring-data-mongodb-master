@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/rest/user_info")
-public class UserInfoApi {
-	
+public class UserInfoAPI {
+	// 测试        
+	@RequestMapping("/main")
+	public String toMain(){
+		return "layout/main";
+	}
 }
