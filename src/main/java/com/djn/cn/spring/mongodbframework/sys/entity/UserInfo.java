@@ -1,7 +1,7 @@
 package com.djn.cn.spring.mongodbframework.sys.entity;
 
 
-import java.util.List;
+
 
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -27,10 +27,11 @@ public class UserInfo extends BaseEntity{
 	/**邮箱*/
 	private String email;
 	/**部门 */
+    @DBRef(lazy = true)
 	private DepartmentInfo departmentInfo;
 	/**角色*/
     @DBRef(lazy = true)
-	private List<RoleInfo> roleInfo;
+	private RoleInfo roleInfo;
 	
 	public String getUserName() {
 		return userName;
@@ -62,10 +63,10 @@ public class UserInfo extends BaseEntity{
 	public void setDepartmentInfo(DepartmentInfo departmentInfo) {
 		this.departmentInfo = departmentInfo;
 	}
-	public List<RoleInfo> getRoleInfo() {
+	public RoleInfo getRoleInfo() {
 		return roleInfo;
 	}
-	public void setRoleInfo(List<RoleInfo> roleInfo) {
+	public void setRoleInfo(RoleInfo roleInfo) {
 		this.roleInfo = roleInfo;
 	}
 	@Override
