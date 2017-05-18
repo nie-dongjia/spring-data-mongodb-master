@@ -22,7 +22,7 @@ public class DepartmentInfoTest {
 	@Test
 	public void save() {
 		DepartmentInfo departmentInfo = new DepartmentInfo();
-		departmentInfo.setName("研发部");
+		departmentInfo.setName("董事局");
 		System.out.println(iDepartmentInfoRepository.save(departmentInfo));
 	}
 	@Test

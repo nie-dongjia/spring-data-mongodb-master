@@ -27,10 +27,10 @@ public class UserInfoTest {
 	@Test
 	public void save() {
 		UserInfo userInfo = new UserInfo();
-		userInfo.setName("管理员2");
+		userInfo.setName("管理员");
 		userInfo.setPassword("123456");
 		userInfo.setUserName("admin");
-		userInfo.setDepartmentInfo(	iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13"));
+//		userInfo.setDepartmentInfo(	iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13"));
 		System.out.println(iUserInfoRepository.save(userInfo));
 	}
 //	@Test

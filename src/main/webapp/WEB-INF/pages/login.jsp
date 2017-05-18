@@ -118,7 +118,7 @@
 		var password = $('#password').val();
 		$.ajax({
 			type : 'post',
-			url : '${pageContext.request.contextPath}/logon/logon_judge.do',
+			url : '${pageContext.request.contextPath}/login.do',
 			data : {
 				"loginName" : loginName,
 				"password" : password
