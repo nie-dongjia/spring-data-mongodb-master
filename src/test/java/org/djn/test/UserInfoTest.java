@@ -71,8 +71,8 @@ public class UserInfoTest {
 	@Test
 	public void find() {
 		DepartmentInfo departmentInfo = iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13");
-		System.out.println(iUserInfoRepository.findOneByDepartmentInfo(departmentInfo).getName());
-		System.out.println(iUserInfoRepository.findOneByDepartmentInfo(departmentInfo).getName());
+		System.out.println(iUserInfoRepository.findOneByDepartmentInfo(departmentInfo).size()+"####");
+		System.out.println(iUserInfoRepository.findOneByDepartmentInfo(departmentInfo).get(0).getName()+"####");
 	}
 	
 }

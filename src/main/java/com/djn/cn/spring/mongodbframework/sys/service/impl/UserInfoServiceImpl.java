@@ -21,4 +21,8 @@ public class UserInfoServiceImpl  implements IUserInfoService {
 	public UserInfo findById(String id) {
 		return iUserInfoRepository.findOne(id);
 	}
+	@Override
+	public UserInfo findByUserName(String userName) {
+		return iUserInfoRepository.findOneByUserName(userName);
+	}
 }
