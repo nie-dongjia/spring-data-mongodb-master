@@ -22,4 +22,8 @@ public class IndexController {
 	public String toLogin(){
 		return "login";
 	}
+	@RequestMapping("/sys/main")
+	public String toMain(){
+		return "layout/main";
+	}
 }
