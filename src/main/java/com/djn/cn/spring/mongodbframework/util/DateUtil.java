@@ -166,7 +166,6 @@ public class DateUtil {
 	
 	public static void main(String[] args) throws ParseException {
 		// System.out.println(getDateByYearAndMonth("2017-05"));
-
 		// System.out.println(getDaysOfMonth(getDateByYearAndMonth("2017-03")));
 		// System.out.println(getDateByYearAndMonth("2017-03").getTime());
 		// System.out.println(isThisMonth(getDateByYearAndMonth("2017-04").getTime()));
@@ -194,10 +193,10 @@ public class DateUtil {
 //		System.out.println(listDate.size());
 //		System.out.println(getCurrentMonthDay());
 //      "2017-05-18"  到 Date 2017-05-18 00：00：00   
-// new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+//      new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 //		System.out.println(new Date());
 //		System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-		// 获取当前时间  
+//      获取当前时间  
 
 //		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
 //		Date date = fmt.parse();
