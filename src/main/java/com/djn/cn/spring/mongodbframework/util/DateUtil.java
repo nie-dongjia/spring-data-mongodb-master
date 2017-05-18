@@ -1,5 +1,7 @@
 package com.djn.cn.spring.mongodbframework.util;
 
+import java.sql.Time;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -144,13 +146,24 @@ public class DateUtil {
 			Date d = cal.getTime();
 			// SimpleDateFormat simpleDateFormat = new
 			// SimpleDateFormat("yyyy-MM-dd");
-			System.out.println(d);
+//			System.out.println(d);
 			// String df = simpleDateFormat.format(d);
 			dates.add(d);
 		}
 		return dates;
 	}
-
+	/**
+	 * 获取时间Date  "2017-08-15"  -> "2017-08-15 00:00:00" 时间格式 
+	 * @Title  getShortDate  
+	 * @return Date   
+	 * @throws ParseException 
+	 *
+	 */
+	public static Date  getShortDate(String dateStr) throws ParseException{
+		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
+		return  fmt.parse(dateStr);
+	}
+	
 	public static void main(String[] args) throws ParseException {
 		// System.out.println(getDateByYearAndMonth("2017-05"));
 
@@ -176,11 +189,19 @@ public class DateUtil {
 //		String str = "9:00";
 //		System.out.println(str.substring(0, 1));
 //		System.out.println(str.substring(2, 4));
-		List<Date> listDate = new ArrayList<>();
-		listDate = DateUtil.dayReport(new Date());
-		System.out.println(listDate.size());
-		System.out.println(getCurrentMonthDay());
-//		
+//		List<Date> listDate = new ArrayList<>();
+//		listDate = DateUtil.dayReport(new Date());
+//		System.out.println(listDate.size());
+//		System.out.println(getCurrentMonthDay());
+//      "2017-05-18"  到 Date 2017-05-18 00：00：00   
+// new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+//		System.out.println(new Date());
+//		System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+		// 获取当前时间  
+
+//		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
+//		Date date = fmt.parse();
+		System.out.println(getShortDate("2017-05-18"));
 	}
 
 }
