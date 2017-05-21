@@ -8,10 +8,10 @@
         <!-- Sidebar user panel -->
           <div class="user-panel"  >
             <div class="pull-left image" onclick="openUrl('/userinfo/userinfo_center.do')">
-              <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="img-circle" alt="User Image" id="leftHeadPortrait">
-            </div>
+<%--               <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="img-circle" alt="User Image" id="leftHeadPortrait">
+ --%>            </div>
             <div class="pull-left info">
-              <p> ${currentUser.userName} </p>
+              <p> ${currentUserInfo.userName}</p>
             </div>
           </div>
         <ul class="sidebar-menu">
@@ -82,7 +82,7 @@
             </ul>
           </li> -->
             <!-- 系统管理 -->
-       <!--   <li class="treeview">
+        <li class="treeview">
             <a href="#">
               <i class="fa fa-dashboard"></i> <span>系统管理</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
@@ -91,8 +91,8 @@
               <li><a href="javascript:void(0);" onclick="openUrl('/system_manager/mrole.do',this)"><i class="fa fa-circle-o"></i>角色管理</a></li>
               <li><a href="javascript:void(0);" onclick="openUrl('/userinfo/userinfo_manager.do',this)"><i class="fa fa-circle-o"></i>人员管理</a></li>
             </ul>
-          </li>  -->
-          <c:forEach var="parentNode" items="${currentUser.mRole.modules}">
+          </li> 
+          <%-- <c:forEach var="parentNode" items="${currentUser.mRole.modules}">
           	<!-- 遍历出所有的父节点 --> 
           	   <c:if test="${parentNode['parentModule']==null}">  
 	          	   <li class="treeview">
@@ -110,7 +110,7 @@
                	   </ul>
                	  </li>
                </c:if>
-          </c:forEach> 
+          </c:forEach>  --%>
           
          </ul>
       </section>

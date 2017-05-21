@@ -12,6 +12,7 @@ import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
 import com.djn.cn.spring.mongodbframework.sys.repository.IDepartmentInfoRepository;
 import com.djn.cn.spring.mongodbframework.sys.repository.IUserInfoRepository;
 import com.djn.cn.spring.mongodbframework.sys.service.IUserInfoService;
+import com.djn.cn.spring.mongodbframework.util.EncryptUtil;
 
 
 
@@ -26,12 +27,14 @@ public class UserInfoTest {
 	private IDepartmentInfoRepository iDepartmentInfoRepository;
 	@Test
 	public void save() {
-		UserInfo userInfo = new UserInfo();
-		userInfo.setName("管理员");
-		userInfo.setPassword("123456");
-		userInfo.setUserName("admin");
-//		userInfo.setDepartmentInfo(	iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13"));
+		UserInfo userInfo = iUserInfoRepository.findOneByUserName("admin");
+		userInfo.setPassword(EncryptUtil.encryptToMD5(userInfo.getPassword()));
 		System.out.println(iUserInfoRepository.save(userInfo));
+//		userInfo.setName("管理员");
+//		userInfo.setPassword("123456");
+//		userInfo.setUserName("admin");
+////		userInfo.setDepartmentInfo(	iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13"));
+//		System.out.println(iUserInfoRepository.save(userInfo));
 	}
 //	@Test
 //	public void find() {

@@ -4,9 +4,9 @@
         <!-- Logo -->
         <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>难</b>忘</span>
+          <span class="logo-mini"><b>*</b>*</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>难忘</b>后台管理</span>
+          <span class="logo-lg"><b>**</b>后台管理</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -20,15 +20,15 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <%-- <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="user-image" alt="User Image"> --%>
-                  <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="user-image" alt="User Image" id="headPortrait">
-                  <span class="hidden-xs">${currentUser.userName}</span>
+<%--                   <img src="${pageContext.request.contextPath}/aa.jsp" class="user-image" alt="User Image" id="headPortrait">
+ --%>                  <span class="hidden-xs">${currentUserInfo.userName}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="img-circle" alt="User Image" id="dropdownHeadPortrait">
-                    <p>
-                      	${currentUser.userName} 
+<%--                     <img src="${pageContext.request.contextPath}/${currentUser.iconPath}" class="img-circle" alt="User Image" id="dropdownHeadPortrait">
+ --%>                    <p>
+                      	${currentUserInfo.userName} 
                     </p>
                   </li>
              
