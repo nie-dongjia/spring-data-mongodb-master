@@ -28,7 +28,7 @@ public class DepartmentInfoTest {
 	@Test
 	public void find() {
 		// ObjectId("591d6e9a2973d270b70d6e13")
-		System.out.println(iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13").getName());
+//		System.out.println(iDepartmentInfoRepository.findOne("591d6e9a2973d270b70d6e13").getName());
 	}
 //	@Test
 //	public void findAll() {

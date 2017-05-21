@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * 
- * @ClassName UserInfoApi
- * @Description  UserInfoApi 
+ * @ClassName UserInfoAPI
+ * @Description  UserInfoAPI 
  * @author BigJia-Perfect
  * @date 2017年5月18日 下午11:46:22
  *

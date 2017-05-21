@@ -32,7 +32,9 @@ public class UserInfo extends BaseEntity{
 	/**角色*/
     @DBRef(lazy = true)
 	private RoleInfo roleInfo;
-	
+    /**是否锁定*/
+	private boolean locked;
+    
 	public String getUserName() {
 		return userName;
 	}
@@ -69,9 +71,16 @@ public class UserInfo extends BaseEntity{
 	public void setRoleInfo(RoleInfo roleInfo) {
 		this.roleInfo = roleInfo;
 	}
+	public boolean isLocked() {
+		return locked;
+	}
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
 	@Override
 	public String toString() {
 		return "UserInfo [userName=" + userName + ", nickName=" + nickName + ", password=" + password + ", email="
-				+ email + "]";
+				+ email + ", departmentInfo=" + departmentInfo + ", roleInfo=" + roleInfo + ", locked=" + locked + "]";
 	}
+	
 }
