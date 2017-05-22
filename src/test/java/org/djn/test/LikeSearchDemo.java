@@ -63,5 +63,35 @@ public class LikeSearchDemo {
 
 
 	}
+/************************************************************
+ *
+ * public List search(String name,List list){
+   List results = new ArrayList();
+   Pattern pattern = Pattern.compile(name);
+   for(int i=0; i < list.size(); i++){
+      Matcher matcher = pattern.matcher(((Employee)list.get(i)).getName());
+      if(matcher.matches()){
+         results.add(list.get(i));
+      }
+   }
+   return results;
+}
 
+上面那个是大小写敏感的，如果要求大小写不敏感，改成：
+Pattern pattern = Pattern.compile(name,Pattern.CASE_INSENSITIVE);
+
+并且上面那个是精确查询，如果要模糊匹配，matcher.find()即可以进行模糊匹配
+public List search(String name,List list){
+   List results = new ArrayList();
+   Pattern pattern = Pattern.compile(name);
+   for(int i=0; i < list.size(); i++){
+      Matcher matcher = pattern.matcher(((Employee)list.get(i)).getName());
+      if(matcher.find()){
+         results.add(list.get(i));
+      }
+   }
+   return results;
+}
+
+ ************************************************************/
 }
