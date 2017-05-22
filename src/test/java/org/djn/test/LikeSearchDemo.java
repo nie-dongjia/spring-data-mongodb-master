@@ -43,6 +43,7 @@ public class LikeSearchDemo {
 	//模糊查询
 	public List likeString(String likename){
 	for(int i=0;i<list.size();i++){
+		System.out.println(((Employee)(list.get(i))).getName().indexOf(likename));
 	if(((Employee)(list.get(i))).getName().indexOf(likename)<=-1)
 	list.remove(i);
 	}
@@ -52,9 +53,9 @@ public class LikeSearchDemo {
 
 	public static void main(String arg[]){
 	LikeSearchDemo ll=new LikeSearchDemo();
-	ll.addList("wuxiao",13);
-	ll.addList("wangwang",11);
-	ll.addList("wanghua",12);
+	ll.addList("张三",13);
+	ll.addList("张三22",11);
+	ll.addList("张三3333",12);
 	ll.addList("xiaowang",13);
 	ll.addList("xiaoxiao",13);
 
