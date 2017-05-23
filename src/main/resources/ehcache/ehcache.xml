@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd"
-	updateCheck="false"
->
+	updateCheck="false">
 	<diskStore path="D:/ehcache" />
 	<!-- DefaultCache setting. -->
      <defaultCache
@@ -19,7 +19,4 @@
 
 	  <cache name="myCache"
          maxElementsInMemory="1000"/>
-
-
-
 </ehcache>
