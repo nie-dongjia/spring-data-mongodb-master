@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<permission>
+	<system code="foreranger" name="*****管理系统" url="/*****">
+		<module name="系统设置" sort="7">
+			<menu name="安全管理" sort="1">
+				<url funcs="sys-org-list" href="/dispatch/profile/security/org/orgMgt"
+					name="组织机构管理" sort="1">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/user/viewToUserMgt" name="人员管理"
+					sort="2">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/dispatch/profile/security/role/roleMgt"
+					name="角色管理" sort="3">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/permission/listPermission"
+					name="权限管理" sort="4">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/dispatch/profile/security/area/areaMgt"
+					name="地区管理" sort="5">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/dispatch/profile/security/patrol_device/deviceMgt"
+					name="巡护设备管理" sort="6">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+			</menu>
+
+			<menu name="系统参数设置" sort="4">
+				<url funcs="sys-org-list" href="/setting/viewToSetupMgt" name="常规设置"
+					sort="1">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+				<url funcs="sys-org-list" href="/setting/viewToMonitorSetupMgt"
+					name="监控参数设置" sort="2">
+					<func name="查看" sort="1">
+						<code>sys-org-list,sys-org-listData</code>
+					</func>
+				</url>
+			</menu>
+		</module>
+	</system>
+</permission>
