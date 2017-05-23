@@ -23,6 +23,8 @@ public class LikeSearchDemo {
 	}
 
 	public List list=new ArrayList();
+	public List listLike=new ArrayList();
+	
 
 	//增加员工
 	public List addList(String name,int age){
@@ -35,31 +37,29 @@ public class LikeSearchDemo {
 
 	//显示所有员工
 	public void ShowList(){
-	for(int i=0;i<list.size();i++){
-	System.out.println(((Employee)(list.get(i))).getName()+" "+((Employee)(list.get(i))).getAge());
+	for(int i=0;i<listLike.size();i++){
+	System.out.println(((Employee)(listLike.get(i))).getName()+" "+((Employee)(listLike.get(i))).getAge());
 	}
 	}
 
 	//模糊查询
-	public List likeString(String likename){
-	for(int i=0;i<list.size();i++){
-		System.out.println(((Employee)(list.get(i))).getName().indexOf(likename));
-	if(((Employee)(list.get(i))).getName().indexOf(likename)<=-1)
-	list.remove(i);
-	}
-	return list;
+	public List likeString(String likename) {
+		for (int i = 0; i < list.size(); i++) { // 有问题 i + 但是 List.size 减少了  
+			if (((Employee) (list.get(i))).getName().indexOf(likename) > -1)
+				listLike.add(list.get(i));
+		}
+		return list;
 
 	}
 
 	public static void main(String arg[]){
 	LikeSearchDemo ll=new LikeSearchDemo();
 	ll.addList("张三",13);
-	ll.addList("张三22",11);
+	ll.addList("张三3333444",12);
 	ll.addList("张三3333",12);
 	ll.addList("xiaowang",13);
 	ll.addList("xiaoxiao",13);
-
-	ll.likeString("wang");
+	ll.likeString("张三");  
 	ll.ShowList();
 
 
