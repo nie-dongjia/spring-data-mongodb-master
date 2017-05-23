@@ -17,12 +17,12 @@ import com.djn.cn.spring.mongodbframework.sys.entity.UserInfo;
  */
 public class BaseEntity {
 	@Id
-	/**id*/
+	/**id*/    
 	private String id;
 	/**名称*/
 	private String name;
 	/**创建日期*/
-	private Date   createTime = new Date();
+	private Date createTime;
 	/**  最后修改日期 */ 
 	private Date   lastUpdateTime;
     /** 描述 */
