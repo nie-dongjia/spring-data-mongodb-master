@@ -1,6 +1,7 @@
 package org.djn.test;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class LikeSearchDemo {
@@ -52,16 +53,17 @@ public class LikeSearchDemo {
 
 	}
 
-	public static void main(String arg[]){
-	LikeSearchDemo ll=new LikeSearchDemo();
-	ll.addList("张三",13);
-	ll.addList("张三3333444",12);
-	ll.addList("张三3333",12);
-	ll.addList("xiaowang",13);
-	ll.addList("xiaoxiao",13);
-	ll.likeString("张三");  
-	ll.ShowList();
-
+	public static void main(String arg[]) {
+//		LikeSearchDemo ll = new LikeSearchDemo();
+//		ll.addList("张三", 13);
+//		ll.addList("张三3333444", 12);
+//		ll.addList("张三3333", 12);
+//		ll.addList("xiaowang", 13);
+//		ll.addList("xiaoxiao", 13);
+//		ll.likeString("张三");
+//		ll.ShowList();
+		
+		System.out.println(new Date());
 
 	}
 /************************************************************

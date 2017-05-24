@@ -163,6 +163,18 @@ public class DateUtil {
 		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
 		return  fmt.parse(dateStr);
 	}
+	/**
+	 * 获取当前的日期【不包含时分秒】
+	 * @Title  getNowDate  
+	 * @return Date   
+	 *
+	 */
+	public static Date  getNowDate() throws ParseException{
+		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		String str = fmt.format(date);
+		return  fmt.parse(str);
+	}
 	
 	public static void main(String[] args) throws ParseException {
 		// System.out.println(getDateByYearAndMonth("2017-05"));
@@ -200,7 +212,8 @@ public class DateUtil {
 
 //		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
 //		Date date = fmt.parse();
-		System.out.println(getShortDate("2017-05-18"));
+//		System.out.println(getShortDate("2017-05-18"));
+		System.out.println(getNowDate());
 	}
 
 }
