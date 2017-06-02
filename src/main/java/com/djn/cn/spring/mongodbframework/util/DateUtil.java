@@ -1,6 +1,7 @@
 package com.djn.cn.spring.mongodbframework.util;
 
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -213,7 +214,10 @@ public class DateUtil {
 //		DateFormat fmt =new SimpleDateFormat("yyyy-MM-dd");
 //		Date date = fmt.parse();
 //		System.out.println(getShortDate("2017-05-18"));
-		System.out.println(getNowDate());
+//		System.out.println(getNowDate());
+		double rate = 13.33333333333333333333;
+		BigDecimal   b   =   new   BigDecimal(rate);  
+		System.out.println(b.setScale(2,   BigDecimal.ROUND_HALF_UP).doubleValue());
 	}
 
 }
