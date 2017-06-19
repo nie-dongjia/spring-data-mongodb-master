@@ -11,7 +11,7 @@
 		<property name="javaMailProperties">
 			<props>
 				<prop key="mail.smtp.auth">true</prop>
-				<prop key="mail.smtp.ssl.enable">true</prop>
+				<prop key="mail.smtp.ssl.enable">true</prop> <!-- QQ需要配置SSL -->
 				<prop key="mail.smtp.timeout">25000</prop>
 				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
 			</props>

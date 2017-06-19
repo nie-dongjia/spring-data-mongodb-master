@@ -31,13 +31,15 @@ public class MailTest {
 	public void mail163Test() {
 		try {
 			MimeMessage msg = mailSender.createMimeMessage();
-			MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
-			helper.setFrom("ezeduyun@163.com");
-			helper.setTo("327803131@qq.com");
-			helper.setText("tets this is a spring mvc email");
-			helper.setSubject("邮件测试");
-			mailSender.send(msg);
-			System.out.println("email send ok");
+			for(int i = 0 ;i<=1000;i++){
+				MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
+				helper.setFrom("changyanjx@163.com");
+				helper.setTo("327803131@qq.com");
+				helper.setText("tets this is a spring mvc email");
+				helper.setSubject("你好啊2");
+				mailSender.send(msg);
+				System.out.println("email send ok");
+			}
 
 		} catch (MessagingException e) {
 			System.out.println("send fail");
@@ -50,11 +52,31 @@ public class MailTest {
 			MimeMessage msg = mailSender.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
 			helper.setFrom("changyanjx2@sina.com");
-			helper.setTo("327803131@qq.com");
+			helper.setTo("468084221@qq.com");
 			helper.setText("tets this is a spring mvc email2222");
-			helper.setSubject("邮件测试");
+			helper.setSubject("你好啊");
 			mailSender.send(msg);
 			System.out.println("email send ok");
+			
+		} catch (MessagingException e) {
+			System.out.println("send fail");
+			e.printStackTrace();
+		}
+	}
+	@Test
+	public void mailSinaForTest() {
+		try {
+			
+			MimeMessage msg = mailSender.createMimeMessage();
+			for(int i = 0 ; i< 1000; i++){
+				MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
+				helper.setFrom("changyanjx2@sina.com");
+				helper.setTo("327803131@qq.com");
+				helper.setText("tets this is a spring mvc email2222");
+				helper.setSubject("你好啊");
+				mailSender.send(msg);
+				System.out.println("email send ok");
+			}
 			
 		} catch (MessagingException e) {
 			System.out.println("send fail");
@@ -145,10 +167,30 @@ public class MailTest {
 			helper.setFrom("468084221@qq.com");
 			helper.setTo("327803131@qq.com");
 			helper.setText("tets this is a spring mvc email2222");
-			helper.setSubject("邮件测试QQ22");
+			helper.setSubject("你好啊");
 			mailSender.send(msg);
 			
 			System.out.println("email send ok");
+			
+		} catch (MessagingException e) {
+			System.out.println("send fail");
+			e.printStackTrace();
+		}
+	}
+	@Test
+	public void mailQQSSLForTest() {
+		try {
+			MimeMessage msg = mailSender.createMimeMessage();
+			for(int i = 0;i <= 500;i++){
+				MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
+				helper.setFrom("468084221@qq.com");
+				helper.setTo("327803131@qq.com");
+				helper.setText("tets this is a spring mvc email2222");
+				helper.setSubject("你好啊3");
+				mailSender.send(msg);
+				System.out.println("email send ok"+i+"次");
+			}
+			
 			
 		} catch (MessagingException e) {
 			System.out.println("send fail");
