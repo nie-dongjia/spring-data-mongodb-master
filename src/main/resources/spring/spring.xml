@@ -15,5 +15,5 @@
 	<import resource="classpath:spring/spring-ehcache.xml" />
 	<import resource="classpath:spring/spring-shiro.xml" />
 	<import resource="classpath:spring/spring-mail.xml" />
-	<import resource="classpath:spring/spring-redis.xml" />
+<!-- 	<import resource="classpath:spring/spring-redis.xml" /> -->
 </beans>

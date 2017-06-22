@@ -24,7 +24,7 @@ import org.springframework.stereotype.Service;
  * @author NieDongjia 
  * @param <T>
  */
-@Service
+//@Service
 public class RedisCacheUtil<T> {
 
 	@Autowired
