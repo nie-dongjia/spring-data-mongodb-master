@@ -71,7 +71,7 @@ public class FileInfoController  {
 				}
 			}
 		}
-	return null;
+	return jsonResult;
 }
 	
 	
