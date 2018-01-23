@@ -78,6 +78,7 @@
 			<value>
 			     /login_judge = anon
 				 /resources/** = anon
+				 /bootstrap/** = anon
 				/rest/** = anon
 				/** = authc
 			</value>
